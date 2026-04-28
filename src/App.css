@@ -13,15 +13,6 @@
   }
 }
 
-@layer base {
-  * {
-    @apply border-border outline-ring/50;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
-}
-
 :root {
   --background: oklch(0.9529 0.0146 102.4597);
   --foreground: oklch(0.4063 0.0255 40.3627);
@@ -200,4 +191,70 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/* layout */
+.page-title {
+  @apply text-2xl font-bold mb-2;
+}
+
+/* top section */
+.intro-row {
+  @apply flex flex-col gap-2 mb-6;
+}
+
+/* main row */
+.action-row {
+  @apply flex items-center justify-between gap-4;
+}
+
+/* left text */
+.action-row p {
+  @apply text-sm text-muted-foreground;
+}
+
+/* search */
+.search-field {
+  @apply flex items-center border border-border rounded-md px-3 h-9 bg-background w-[260px];
+}
+
+.search-icon {
+  @apply w-4 h-4 text-muted-foreground mr-2;
+}
+
+.input-field {
+  @apply w-full outline-none bg-transparent text-sm;
+}
+
+/* right side */
+.action-row > div:last-child {
+  @apply flex items-center gap-2;
+}
+
+/* select */
+/* .select-trigger {
+  @apply h-9 px-3 border border-border rounded-md text-sm;
+} */
+.select-trigger {
+  @apply h-9 px-3 min-w-[180px] border border-border rounded-md text-sm flex items-center justify-between bg-background;
+}
+
+/* dropdown */
+[data-radix-select-content] {
+  @apply bg-white border border-border rounded-md shadow-md p-1;
+}
+
+/* dropdown item */
+[data-radix-select-item] {
+  @apply px-3 py-2 text-sm cursor-pointer rounded-md;
+}
+
+/* hover effect */
+[data-radix-select-item]:hover {
+  @apply bg-muted;
+}
+
+/* column header */
+.column-title {
+  @apply text-sm font-semibold text-muted-foreground;
 }
