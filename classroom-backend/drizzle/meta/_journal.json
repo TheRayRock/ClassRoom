@@ -8,6 +8,13 @@
       "when": 1778431980236,
       "tag": "0000_clammy_dexter_bennett",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1778473195787,
+      "tag": "0001_amazing_sunspot",
+      "breakpoints": true
     }
   ]
 }
