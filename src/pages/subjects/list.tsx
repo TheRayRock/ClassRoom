@@ -58,7 +58,7 @@ const SubjectsList = () => {
           ),
         },
         {
-          accessorKey: "department",
+          accessorKey: "department.name",
           header: () => <p className="column-title">Department</p>,
           cell: ({ getValue }) => (
             <Badge variant="secondary">{getValue<string>()}</Badge>
@@ -112,23 +112,6 @@ const SubjectsList = () => {
               />
             </div>
 
-            {/* <Select
-              value={selectedDepartment}
-              onValueChange={setSelectedDepartment}
-            >
-              <SelectTrigger className="select-trigger">
-                <SelectValue placeholder="All Departments" />
-              </SelectTrigger>
-
-              <SelectContent>
-                <SelectItem value="all">All Departments</SelectItem>
-                {DEPARTMENT_OPTIONS.map((department) => (
-                  <SelectItem key={department.value} value={department.value}>
-                    {department.label}
-                  </SelectItem>
-                ))}
-              </SelectContent>
-            </Select> */}
             <Select
               value={selectedDepartment}
               onValueChange={setSelectedDepartment}

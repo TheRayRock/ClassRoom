@@ -16,7 +16,7 @@ import { dataProvider } from "./provider/data";
 import Dashboard from "./pages/Dashboard";
 import { Layout } from "./components/refine-ui/layout/layout";
 import SubjectsList from "./pages/subjects/list";
-import SubjectCreate from "./pages/subjects/create";
+import SubjectCreate from "./pages/subjects/create"; 
 
 function App() {
   return (

@@ -8,3 +8,24 @@ export type Subject = {
   updatedAt?: string;
   description?: string;
 };
+
+export type ListResponse<T = unknown> = {
+  data: T[];
+  Pagination: {
+    page: number;
+    limit: number;
+    total: number;
+    totalPages: number;
+  };
+};
+
+
+
+export type CreateResponse<T = unknown> = {
+  data: T;
+};
+
+
+export type GetOneResponse<T = unknown> = {
+  data: T;
+};
