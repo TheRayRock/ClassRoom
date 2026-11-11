@@ -37,7 +37,7 @@ router.get("/", async (req, res) => {
 
     const subjectsList = await db
       .select({
-        ...getTableColumns(departments),
+        ...getTableColumns(subjects),
         department: { ...getTableColumns(departments) },
       })
       .from(subjects)
@@ -57,7 +57,7 @@ router.get("/", async (req, res) => {
       },
     });
   } catch (e) {
-    console.error(`get /subject errror: ${e}`);
+    console.error(`GET /subject error: ${e}`);
     res.status(200).json({ error: "Failed to get subject" });
   }
 });
